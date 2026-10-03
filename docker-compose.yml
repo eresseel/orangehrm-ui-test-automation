@@ -1,0 +1,17 @@
+# Kényelmi réteg a "docker build" + "docker run" páros helyett: egyetlen paranccsal
+# (docker compose up --build) építhető és futtatható a tesztprojekt.
+services:
+  orangehrm-tests:
+    platform: linux/amd64
+    shm_size: '2gb'
+    build: .
+    # A tesztjelentéseket és a letöltött fájlokat a host gépre "kimountoljuk", hogy a
+    # konténer leállása/törlése után is elérhetők maradjanak a target mappában –
+    # enélkül minden eredmény elveszne a konténerrel együtt.
+    volumes:
+      - ./target/surefire-reports:/app/target/surefire-reports
+      - ./target/downloads:/app/target/downloads
+    # A publikus demo oldal eléréséhez a konténernek internetkapcsolatra van szüksége;
+    # ez a Docker alapértelmezett hálózati módjával (bridge) magától működik.
+    environment:
+      - DOCKER_CONTAINER=true
