@@ -1,24 +1,84 @@
-# Compiled class file
+### Maven ###
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+### Maven Wrapper ###
+# A wrapper szkriptek (mvnw, mvnw.cmd) és a .mvn/wrapper/maven-wrapper.properties
+# SZÁNDÉKOSAN NINCSENEK itt: azoknak be kell kerülniük a repóba, hogy Maven
+# telepítés nélkül is futtatható legyen a projekt.
+
+### Java ###
 *.class
-
-# Log file
-*.log
-
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
 *.jar
 *.war
-*.nar
 *.ear
-*.zip
-*.tar.gz
-*.rar
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+*.nar
 hs_err_pid*
 replay_pid*
+
+### Log fájlok ###
+*.log
+
+### Teszt letöltések (a BaseTest minden futás előtt úgyis kiüríti) ###
+downloads/
+
+### Eclipse ###
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
+.project
+.classpath
+.factorypath
+.apt_generated
+.apt_generated_test
+
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+### VS Code ###
+.vscode/
+.factorypath
+
+### Operációs rendszer - macOS ###
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+### Operációs rendszer - Windows ###
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+### Operációs rendszer - Linux ###
+*~
+.directory
+.Trash-*
+
+### Egyéb, gépfüggő fájlok ###
+*.iml
+.env
