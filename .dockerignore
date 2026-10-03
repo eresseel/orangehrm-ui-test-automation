@@ -1,0 +1,13 @@
+# Build-eredmények: a konténerben úgyis újra létrejönnek, felesleges bemásolni/cache-elni őket,
+# és a target/downloads esetleges korábbi tartalma zavaró álpozitív eredményt adhatna.
+target/
+
+# Verziókezelés és IDE-specifikus mappák, amik nem szükségesek a teszt futtatásához.
+.git/
+.idea/
+*.iml
+.vscode/
+
+# A Maven Wrapper letöltött jar/bináris állománya nem kell, mert a konténer image-ben
+# már eleve telepítve van a Maven.
+.mvn/wrapper/maven-wrapper.jar
